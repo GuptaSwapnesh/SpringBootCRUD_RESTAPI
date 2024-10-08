@@ -22,7 +22,7 @@ pipeline {
         // Build the application
         stage ('Maven Build') {
             steps {
-                sh "mvn clean package -DskipTest=true"
+                bat "mvn clean package -DskipTest=true"
                 archive 'target/*.jar'
             }
         }
